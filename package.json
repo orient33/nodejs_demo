@@ -1,0 +1,27 @@
+{
+  "name": "util.internationalization",
+  "version": "1.0.0",
+  "description": "convert strings between excel doc and android strings resources.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.chj.com/cario/util.internationalization.git"
+  },
+  "keywords": [
+    "internationalization"
+  ],
+  "author": "zhangzhennan@chehejia.com",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "commander": "^2.11.0",
+    "js-xlsx-gen": "^0.1.3",
+    "mkdirs": "0.0.2",
+    "xlsx": "^0.11.6",
+    "xml": "^1.0.1",
+    "xml-reader": "^2.4.3"
+  }
+}

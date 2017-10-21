@@ -1,0 +1,33 @@
+#!/usr/local/bin/node
+var i18n = require("../index");
+var program = require('commander');
+
+var inputs = process.argv;
+
+// if(inputs.length > 0) {
+//   if (-1 < inputs[0].indexOf("node")) {
+//     inputs = inputs.slice(1);
+//   }
+// }
+
+program.version("0.0.1");
+
+program
+  .arguments('<android_project_path> <excel_path>')
+  .action(function(project_path, excel_path) {
+    i18n({
+      project_path: project_path,
+      excel_path: excel_path
+    }).then(function(){
+      console.log("update successful");
+    }).catch(function(err) {
+      console.error(err);
+    });
+  });
+
+
+program.parse(inputs);
+
+if (!inputs.slice(1).length) {
+    program.outputHelp();
+}
