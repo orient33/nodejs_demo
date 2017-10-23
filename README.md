@@ -14,7 +14,7 @@ Internationalization tool
 
 #### 抽取项目中的多语言内容
 
-```javascript
+```shell
 # 该项目的所在位置假定为 $TOOL_ROOT
 # Android项目的所在位置假定为 $ANDROID_PROJECT
 # Excel文档的所在位置假定为 $EXCEL_FILE
@@ -23,7 +23,7 @@ node $TOOL_ROOT/bin/i18n $ANDROID_PROJECT $EXCEL_FILE
 
 #### 把Excel表中的多语言内容部署到Android项目中
 
-```javascript
+```shell
 # 该项目的所在位置假定为 $TOOL_ROOT
 # Android项目的所在位置假定为 $ANDROID_PROJECT
 # Excel文档的所在位置假定为 $EXCEL_FILE
