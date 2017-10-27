@@ -34,13 +34,11 @@ exports = module.exports = function(opts) {
 
 
       if (!sData) {
-        return sParser.setData(eData).then(function(){
-          return sParser.write(project_path);
-        });
+        sParser.setData(eData);
+        return sParser.write(project_path);
       } else if (!eData) {
-        return eParser.setData(sData).then(function(){
-          return eParser.write(excel_path);
-        });
+        eParser.setData(sData);
+        return eParser.write(excel_path);
       } else {
         var union = {};
         var parser1 = sParser.getLatestModified() > eParser.getLatestModified() ? eParser : sParser;
