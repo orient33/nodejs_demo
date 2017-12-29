@@ -32,16 +32,19 @@ exports = module.exports = function(opts) {
         throw new Error("no project and no excel found.");
       }
 
-
+      console.log(" 读取结果: "+ (!sData)+",, "+(!eData));
       if (!sData) {
+        console.log("xml empty. write xml from Excel.");
         sParser.setData(eData);
         return sParser.write(project_path);
       } else if (!eData) {
+        console.log("Excel empty. write Excel from xml.");
         eParser.setData(sData);
         return eParser.write(excel_path);
       } else {
+        console.log("Excel not empty, xml not empty! write each other!");
         var union = {};
-        var parser1 = sParser.getLatestModified() > eParser.getLatestModified() ? eParser : sParser;
+        var parser1 = sParser;
         var parser2 = parser1 == sParser ? eParser : sParser;
 
         var key, type, value;
