@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-  <notification>D:\work\amigo\notification\notification.plugin\src</notification>
-  <!-- account>D:\work\amigo\plugin.account\account.plugin\src</account -->
+  <account>D:\work\amigo\plugin.account\account.plugin\src</account>
+  <airconditioner>D:\work\amigo\p.airconditioner\airconditioner.plugin\src</airconditioner>
+  <audiocontrol>D:\work\amigo\p.audiocontrol\audiocontrol.plugin\src</audiocontrol>
+  <dashboard>D:\work\amigo\p.dashboard\dashboard.plugin\src</dashboard>
+  <fm>D:\work\amigo\p.fm\fm.plugin\src</fm>
+  <lights>D:\work\amigo\p.lights\lights.plugin\src</lights>
+  <map>D:\work\amigo\p.map\map.plugin\src</map>
+  <mediacenter>D:\work\amigo\p.media\mediacenter.plugin\src</mediacenter>
+  <menu>D:\work\amigo\p.menu\menu.plugin\src</menu>
+  <settings>D:\work\amigo\p.s\settings.plugin\src</settings>
+  <settings.display>D:\work\amigo\p.s.display\settings.display.plugin\src</settings.display>
+  <settings.language>D:\work\amigo\p.s.language\settings.language.plugin\src</settings.language>
+  <settings.power>D:\work\amigo\p.s.power\settings.power.plugin\src</settings.power>
+  <vehicle>D:\work\amigo\p.vehicle\vehicle.plugin\src</vehicle>
 <resources>
