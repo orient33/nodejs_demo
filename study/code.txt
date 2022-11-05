@@ -1,0 +1,50 @@
+1 模块
+参考  https://www.w3cschool.cn/nodejs/nodejs-module-system.html
+ 
+ 文件和模块是一一对应的。换言之，一个 Node.js 文件就是一个模块，这个文件可能是JavaScript 代码、JSON 或者编译过的C/C++ 扩展。
+ require('./hello'); //引入模块
+ require("http");    //Node.js中自带了一个叫做"http"的模块
+ Node.js中存在4类模块（原生模块和3种文件模块）:
+   http、fs、path等，原生模块。
+   ./mod或../mod，相对路径的文件模块。
+   /pathtomodule/mod，绝对路径的文件模块。
+   mod，非原生模块的文件模块
+2 npm 随同NodeJS一起安装的包管理工具,感觉类似Ubuntu的apt
+  参考: https://www.w3cschool.cn/nodejs/nodejs-npm.html
+  npm install xx -g //全局安装 -l本地安装
+3 库的导入
+  是 package.json的 dependencies 节点了引入第三方库.
+  bluebird. (这里用了Promise :异步代码实现控制流的一种方式)
+4 Promise.all([]).spread()
+                 .then()  //区别
+
+				 
+//依赖库: events,util,fs,path,bluebird,xml-reader,xml,mkdirs
+StringParse.read(){
+  1 找出android项目下所有Strings.xml文件
+  2 遍历 strings.xml, 将文件如下信息存到temp: fileName,type,time,content
+  3 遍历temp数组:把content存到data的map中
+  4 emit -> (read, data.content); content赋给_data
+  5 resolve(data.content) //Promise的API表示操作成功,可以进行下一步了
+}
+.write(){
+  1 把content[id][type]按照type分割;
+  2 创建每一个type对应的目录 values-fr等,然后写入文件 strings.xml
+}
+//依赖库:events,util,fs,path,mkdirs,bluebird,js-xlsx-gen,xlsx
+ExcelParser.read(){
+  1 xlsx的readFile,取出sheet, cells
+  2 解析sheet的行,列的content,存入二维数组?
+    content[id][type] = value; //type就是语言类型 如en,fr,it对应英,法,意.
+}
+.write(){
+  1 将_data生成sheet, 通过xls工具/库写到workbook
+  2 通过xls工具/库把workbook写到指定的文件
+}
+
+//代码细节:
+map遍历 : for(var key in map)
+set遍历 : for(var value of set)
+
+参考: https://github.com/SheetJS/js-xlsx/blob/master/bin/xlsx.njs
+      https://github.com/panosoft/js-xlsx-gen
